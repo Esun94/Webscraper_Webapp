@@ -1,0 +1,19 @@
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 2em;
+}
+
+
+.display-feed {
+    border-style: solid;
+    margin: 3em;
+
+}
+
+.result {
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+}
