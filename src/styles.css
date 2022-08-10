@@ -7,13 +7,26 @@
 
 
 .display-feed {
+    display: flex;
     border-style: solid;
     margin: 3em;
 
 }
+.heading, .subheading, .body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    background-color: rgb(44, 228, 44);
+}
 
+.table {
+    margin: auto;
+}
 .result {
     margin: 2em;
     display: flex;
     justify-content: center;
+}
+
+.paragraph {
+    max-width: 40em;
 }

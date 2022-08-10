@@ -2,18 +2,18 @@
 fetch('http://localhost:8000/results')
     .then(response => { return response.json() })
     .then(data => {
+        // console.log(data)
         data.forEach(result => {
-            // const title = '<a>' + result.title + '</a>'
-            const titleAndLink = 
+            const info = 
+
+            // <td><b>${result.heading}</b></td>
             `
-            <h5 class="result">
-                <a href='${result.url}'>
-                    ${result.title}
-                </a>
-            </h5>
+            <tr>
+                <td><b>${result.subTitle}</b></td>
+                <td class="paragraph">${result.paragraph}</td>
+            </tr>
             `
-            document.querySelector('#feed').insertAdjacentHTML("beforeend", titleAndLink)
-        })
+            document.querySelector('#feed').insertAdjacentHTML("beforeend", info)
+        });
     })
     .catch(err => console.log(err))
-
