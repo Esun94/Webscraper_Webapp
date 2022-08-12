@@ -7,15 +7,8 @@ const app = express()
 
 app.use(cors());
 
-const url = 'https://en.wikipedia.org/wiki/Benjamin_Franklin';
+const url = 'https://en.wikipedia.org/wiki/Anonymous_(hacker_group)';
 
-// const url = 'https://www.theguardian.com/us';
-
-//METHOD = get,post,put,delete
-//PATH = example /burger or endpoint
-//HANDLER function to be executed
-
-// app.METHOD(PATH, HANDLER);
 
 app.get('/results', function (req, res) {
     axios(url)
@@ -24,28 +17,15 @@ app.get('/results', function (req, res) {
             const $ = cheerio.load(html);
             const wikiResult = [];
 
-            // $('.mw-headline', html).each(function() {
-            //     let subTitle = $(this).text();
-            //     wikiResult.push({
-            //         subTitle,
-            //     });
-            // });
+            
             $( 'h2, p', html).each(function() {
-                // let heading = $(this).find('.firstHeading').text();
                 let subTitle = $(this).find('.mw-headline').text();
                 let paragraph = $(this).text();
                 wikiResult.push({
-                    // heading,
                     subTitle,
                     paragraph,
                 });
             }),
-            // $('p', html).each(function() {
-            //     let paragraph = $(this).text();
-            //     wikiResult.push({
-            //         paragraph,
-            //     });
-            // });
             res.json(wikiResult)
         }).catch(err => console.log(err));
 });

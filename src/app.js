@@ -2,13 +2,10 @@
 fetch('http://localhost:8000/results')
     .then(response => { return response.json() })
     .then(data => {
-        // console.log(data)
         data.forEach(result => {
             const info = 
-
-            // <td><b>${result.heading}</b></td>
             `
-            <tr>
+            <tr class="">
                 <td><b>${result.subTitle}</b></td>
                 <td class="paragraph">${result.paragraph}</td>
             </tr>

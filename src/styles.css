@@ -8,24 +8,30 @@
 
 .display-feed {
     display: flex;
-    border-style: solid;
+    /* border-style: solid; */
     margin: 3em;
 
 }
-.heading, .subheading, .body {
+.subheading, .body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
     background-color: rgb(44, 228, 44);
+    border-style: solid;
+}
+
+.row {
+    border-style: solid;
 }
 
 .table {
     margin: auto;
+    border-style: solid;
 }
-.result {
+/* .result {
     margin: 2em;
     display: flex;
     justify-content: center;
-}
+} */
 
 .paragraph {
     max-width: 40em;
